@@ -111,3 +111,87 @@
 // console.log(`Загальна вартість квитків: ${totalPrice} грн`);
 // console.log(`Знижка: ${discountPrice} грн`);
 // console.log(`Фінальна вартість квитків: ${finalPrice} грн`);
+
+//============================================================================================================================
+
+let login = "";
+let password = "";
+let userLogin = "";
+let userPassword = "";
+
+function register(loginEntered, passwordEntered) {
+    login = loginEntered;
+    password = passwordEntered;
+    alert("Реєстрація успішна!");
+}
+
+function loginUser(loginEntered, passwordEntered) {
+    let attempts = 3;
+    while (attempts > 0) {
+        if (loginEntered === login && passwordEntered === password) {
+            alert("Вхід успішний!");
+            break;
+        } 
+        else if (loginEntered !== login && passwordEntered === password) {
+            attempts--;
+            alert("Невірний логін.");
+            break;
+        }
+        else if (loginEntered === login && passwordEntered !== password) {
+            attempts--;
+            alert("Невірний пароль.");
+            break;
+        }
+        else {
+            attempts--;
+            alert("Невірний логін та пароль.");
+            break;
+        }
+    }
+}
+
+while (true) {
+    let action = +prompt("Оберіть дію (1 - реєстрація, 2 - вхід, 0 - вихід):");
+
+    if (action === 1) {
+        userLogin = prompt("Введіть логін:");
+        if (userLogin === null) {
+            alert("Скасовано.");
+            continue;
+        }
+        userPassword = prompt("Введіть пароль:");
+        if (userPassword === null) {
+            alert("Скасовано.");
+            continue;
+        }
+        if (userLogin.trim() === "" || userPassword.trim() === "") {
+            alert("Помилка. Логін та пароль не можуть бути порожніми!");
+        } else {
+            register(userLogin, userPassword);
+        }
+    }
+    else if (action === 2) {
+        if (login === "" || password === "") {
+            alert("Помилка. Спочатку потрібно зареєструватися!");
+            continue;
+        }
+        userLogin = prompt("Введіть логін:");
+        if (userLogin === null) {
+            alert("Скасовано.");
+            continue;
+        }
+        userPassword = prompt("Введіть пароль:");
+        if (userPassword === null) {
+            alert("Скасовано.");
+            continue;
+        }
+        loginUser(userLogin, userPassword);
+    }
+    else if (action === 0) {
+        alert("Вихід з програми.");
+        break;
+    }
+    else {
+        alert("Невірна дія. Спробуйте ще раз.");
+    }
+}
