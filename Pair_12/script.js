@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // function isHighScore(score) {
 //     return score >= 10;
 // };
@@ -74,7 +73,7 @@
 // console.log(lowerUpper);
 
 // let existingBooks = books.filter(book => book.available === true).sort((a, b) => a - b).map(book => `${book.title} - ${book.author}`);
-=======
+
 // function isHighScore(score) {
 //     return score >= 10;
 // };
@@ -150,5 +149,5 @@
 // console.log(lowerUpper);
 
 // let existingBooks = books.filter(book => book.available === true).sort((a, b) => a - b).map(book => `${book.title} - ${book.author}`);
->>>>>>> ea7ef5820bca219db193466356e78254cbf1fc52
+
 // console.log(existingBooks);
