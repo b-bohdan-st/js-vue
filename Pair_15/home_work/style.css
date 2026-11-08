@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: "Roboto", sans-serif;
+    background: #5e5e5e;
+    color: #333333;
+}
+
+.profile-settings{
+    width: min(450px, 90vh);
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name{
+    font-size: 22px;
+    margin: 0;
+}
+
+.profile-description-title {
+    margin: 0;
+}
+
+.profile-description {
+    margin: 10px 0 15px 0;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+label{
+    display: block;
+    margin: 15px 0;
+}
+
+input, select{
+    border: 1px solid #888787;
+    padding: 8px 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button{
+    margin: 10px 0;
+    border: none;
+    background: #ff9100;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.secondary{
+    background: #e2e8f0;
+    color: #7c7d8b;
+}
+
+.hidden{
+    display: none;
+}
+
+.submit-changes {
+    background: #0e664c;
+}
+
+.success{
+    color: #17be20;
+    font-weight: bold;
+}
+
+.dark{
+    background: #53545e;
+    color: #fdfdfd;
+}
+
+.dark input, .dark select {
+    background: #7c7d8b;
+    color: #fff;
+    border-color: #7c7d8b;
+}
+
+.dark .secondary{
+    background: #7c7d8b;
+    color: #fff;
+}
+
+.dark {
+    [placeholder]::placeholder {
+        color: #fff;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="profile-settings">
+        <h1 class="block-name">
+            <p class="profile-name">Hi there, Guest</p>
+            <input id="studentsName" class="profile-description-entry" type="text" placeholder="Enter your name">
+
+            <button id="detailBtn">Show odd info</button>
+            <div class="odd-info hidden">
+                <p class="profile-description-title">Description:</p>
+                <p class="profile-description">(Nothing was entered)</p>
+                
+                <input id="profileDescriptionInput" type="text" placeholder="Enter description">
+                <button id="submit" class="submit-changes">Submit changes</button>
+
+                <select id="themeSelect">
+                    <option value="light">Light theme</option>
+                    <option value="dark">Dark theme</option>
+                </select>
+            </div>
+        </h1>
+    </main>
+
+    <script src="script.js" ></script>
+</body>
+</html>
