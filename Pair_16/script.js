@@ -2,8 +2,12 @@ let taskInput = document.querySelector("#taskInput");
 let addBtn = document.querySelector("#addBtn");
 let taskCounter = document.querySelector("#taskCounter");
 let taskList = document.querySelector("#taskList");
-
 let tasksCounter = 0;
+
+function updateCounter() {
+    tasksCounter = document.querySelectorAll(".task-item");
+    taskCounter.textContent = tasksCounter.length;
+}
 
 function addTask() {
     taskText = taskInput.value.trim();
@@ -53,8 +57,7 @@ function addTask() {
             if (answer) {
                 listElement.remove();
             }
-            tasksCounter = document.querySelectorAll(".task-item");
-            taskCounter.textContent = tasksCounter.length;
+            updateCounter();
         });
 
         let btnContainer = document.createElement("div");
@@ -65,8 +68,7 @@ function addTask() {
         taskList.append(listElement);
         taskInput.value = "";
     }
-    tasksCounter = document.querySelectorAll(".task-item");
-    taskCounter.textContent = tasksCounter.length;
+    updateCounter();
 }
 
 addBtn.addEventListener("click", addTask);
