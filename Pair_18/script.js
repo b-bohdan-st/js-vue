@@ -24,9 +24,7 @@ function submitPress() {
         let errorElement = document.createElement();
         errorElement.textContent = usernameErrorText;
         usernameError.append(errorElement);
-        setTimeout(() => {
-            usernameError.remove(errorElement);
-        }, 2000);
+        setTimeout(() => {usernameError.remove(errorElement);}, 2000);
     }
     if (emailContent === "") {
         let emailErrorText = "Поле пошти не може бути пустим!";
