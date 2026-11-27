@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <p class="brand">COMMUNITY</p>
+        <h1>Створення акаунту</h1>
+        <p class="subtitle">Приєднуйся до нас!</p>
+        <form action="register-form" novalidate>
+            <div class="field">
+                <label>Ім'я користувача</label>
+                <input type="text" id="username" placeholder="Наприклад, Іван">
+                <small id="username-error" class="error"></small>
+            </div>
+            
+            <div class="field">
+                <label>Електронна пошта</label>
+                <input type="text" id="email" placeholder="example@gmail.com">
+                <small id="email-error" class="error"></small>
+            </div>
+
+            <div class="field">
+                <label>Пароль</label>
+                <div>
+                    <input type="password" id="password" placeholder="Мінімум 8 символів">
+                    <button id="toggle-password" class="toggle" type="button">👀</button> <!--🫣-->
+                </div>
+                <small id="password-error" class="error"></small>
+                <div class="strength-track"><div class="strength-bar"></div></div>
+                <small id="strength-text">Надійність паролю</small>
+            </div>
+            <div class="field">
+                <label>Повторіть пароль</label>
+                <input type="password" id="password-confirm" placeholder="Введіть повторно пароль для підтвердження">
+                <small id="confirm-error" class="error"></small>
+            </div>
+            <div class="field">
+                <label class="terms"><input type="checkbox" id="terms"> Погоджуюся з супер умовами</label>
+                <small id="terms-error" class="error"></small>
+            </div>
+
+            <button id="submit-button" class="submit" type="submit">Зареєструватися</button>
+            <small id="submit-error" class="error"></small>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
